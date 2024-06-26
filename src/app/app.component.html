@@ -1,18 +1,23 @@
 <div class="header">
-  <h1>Hello, {{ title }}</h1>
-  <p>Congratulations! Your app is running. </p>
+  <h1>Hello, This is {{ title }}</h1>
+  <p>This page shows a slider. </p>
 </div>
 
-<nav>
+<!-- <nav>
   <ul>
     <li><a routerLink="/app-test01" routerLinkActive="active" ariaCurrentWhenActive="page" target="_blank">Test Component 01</a></li>
     <li><a routerLink="/app-test02" routerLinkActive="active" ariaCurrentWhenActive="page">Test Component 02</a></li>
     <li><a routerLink="/app-test03" routerLinkActive="active" ariaCurrentWhenActive="page">Test Component 03</a></li>
   </ul>
-</nav> 
-
-
+</nav>  -->
 
 <div class="content">
-  <router-outlet></router-outlet>
 </div>
+
+
+<app-toogle-button [slider]="sliderValue" (valueChange)="changeState($event)" ></app-toogle-button>
+<app-second-toogle-button [slider]="sliderValue" (valueChange)="changeState($event)"></app-second-toogle-button>
+
+
+<router-outlet></router-outlet>
+
